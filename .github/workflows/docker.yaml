@@ -4,12 +4,11 @@ on:
   push:
     branches: ["main"]
 
-permissions:
-  packages: read
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
     steps:
       -
         name: Set up QEMU
